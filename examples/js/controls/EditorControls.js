@@ -203,7 +203,7 @@ THREE.EditorControls = function ( object, domElement ) {
 
 	}
 
-	domElement.addEventListener( 'contextmenu', function ( event ) { event.preventDefault(); }, false );
+	domElement.addEventListener( 'contextmenu', function ( event ) { if ( _this.enabled !== false ) event.preventDefault(); }, false );
 	domElement.addEventListener( 'mousedown', onMouseDown, false );
 	domElement.addEventListener( 'mousewheel', onMouseWheel, false );
 	domElement.addEventListener( 'DOMMouseScroll', onMouseWheel, false ); // firefox
